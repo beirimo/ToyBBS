@@ -18,7 +18,7 @@ public class BBSController {
 	
 	
 	@GetMapping("/list")
-	public String () {
+	public String(){
 		return 
 	}
 
