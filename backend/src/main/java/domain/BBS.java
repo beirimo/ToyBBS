@@ -28,4 +28,6 @@ public class BBS {
 		this.contents = contents;
 	}
 	
+	
+	
 }

@@ -1,9 +1,16 @@
 package controller;
 
+import java.util.List;
+
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import domain.BBS;
+import dto.request.BBSListRequest;
+import dto.response.BBSListResponse;
 import service.BBSService;
 
 @RestController
@@ -16,10 +23,10 @@ public class BBSController {
 		this.service  = service;
 	}
 	
-	
+	//client가 요청한 것을 받는 getmapping 
 	@GetMapping("/list")
-	public String(){
-		return 
+	public ResponseEntity<BBSListResponse> getBbsList(@ModelAttribute BBSListRequest req){
+		return ResponseEntity.ok(req);
 	}
 
 }
