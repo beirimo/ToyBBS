@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import dao.BBSDAO;
 import domain.BBS;
+import dto.response.BBSListResponse;
 
 @Service
 public class BBSService {
@@ -19,8 +20,10 @@ public class BBSService {
 	}
 	//게시글 조회
 
-	public List<BBS> getBBSPageList(){
-		return bbsdao.getBBSPageList();
+	public BBSListResponse getBBSPageList() {
+		List<BBS> bbslist = bbsdao.getBBSPageList();
+		return new BBSListResponse(bbslist);
+		
 		
 	}
 }
