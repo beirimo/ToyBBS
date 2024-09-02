@@ -4,8 +4,11 @@ import java.util.List;
 
 import domain.BBS;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class BBSListResponse {
 
 	private List<BBS> bbsList;

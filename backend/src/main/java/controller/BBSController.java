@@ -1,6 +1,6 @@
 package controller;
 
-import java.util.List;
+
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,8 +25,12 @@ public class BBSController {
 	
 	//client가 요청한 것을 받는 getmapping 
 	@GetMapping("/list")
-	public ResponseEntity<BBSListResponse> getBbsList(@ModelAttribute BBSListRequest req){
-		return ResponseEntity.ok(req);
+	public ResponseEntity<BBSListResponse> getBbsList(){
+		BBSListResponse response = service.getBBSPageList();
+		return ResponseEntity.ok(response);
+		
+		
+		
 	}
 
 }
