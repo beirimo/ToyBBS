@@ -1,5 +1,7 @@
 package domain;
 
+import java.time.LocalDateTime;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -17,7 +19,7 @@ public class BBS {
 	//필드 정의 
 	private int seq;
 	private String title;
-	private String createdAt;
+	private LocalDateTime createdAt;
 	private String contents;
 	
 //	
