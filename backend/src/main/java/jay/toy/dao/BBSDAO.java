@@ -12,4 +12,6 @@ import jay.toy.domain.BBS;
 @Repository
 public interface BBSDAO {
 	List<BBS> getBBSPageList();
+	
+	
 }
