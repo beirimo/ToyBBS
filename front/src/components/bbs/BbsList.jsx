@@ -19,7 +19,7 @@ const CallAPI = async() =>{
 
 
 useEffect(()=>{
-    CallAPI();   
+    CallAPI(); 
 },[])
 
 
